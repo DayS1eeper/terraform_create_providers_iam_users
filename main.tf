@@ -38,5 +38,5 @@ resource "google_service_account" "google_test" {
 }
 
 resource "google_service_account_key" "sa_key" {
-  service_account_id = google_service_account.myaccount.name
+  service_account_id = google_service_account.google_test.name
 }
