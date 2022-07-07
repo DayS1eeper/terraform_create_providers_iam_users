@@ -14,3 +14,7 @@ output "TEST_AWS_ROLE_ARN" {
 output "TEST_AWS_EXTERNAL_ID" {
     value = random_string.external_id.id
 }
+
+output "TEST_GOOGLE_CREDENTIALS" {
+    value = base64decode(google_service_account_key.sa_key.private_key)
+}

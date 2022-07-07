@@ -32,3 +32,11 @@ resource "aws_iam_role" "role_delegation_test" {
     ]
   })
 }
+
+resource "google_service_account" "google_test" {
+  account_id = "scalr_provider_provider_configuration_test_acc"
+}
+
+resource "google_service_account_key" "sa_key" {
+  service_account_id = google_service_account.myaccount.name
+}
