@@ -19,3 +19,7 @@ output "TEST_GOOGLE_CREDENTIALS" {
     value = base64decode(google_service_account_key.sa_key.private_key)
     sensitive = true
 }
+
+output "TEST_GOOGLE_PROJECT" {
+    value = google_service_account.google_test.project
+}
