@@ -6,6 +6,9 @@ resource "random_string" "external_id" {
 
 resource "aws_iam_user" "role_delegation_test" {
   name = "go_scal_role_delegation_test"
+  tags = {
+    Owner = "v.mihun@scalr.com"
+  }
 }
 
 resource "aws_iam_access_key" "role_delegation_test" {
@@ -31,10 +34,14 @@ resource "aws_iam_role" "role_delegation_test" {
       },
     ]
   })
+  tags = {
+    Owner = "v.mihun@scalr.com"
+  }
 }
 
 resource "google_service_account" "google_test" {
   account_id = "scalr-provider-pcfg-test"
+  description = "Service account for testing purposes. Used in terraform-scalr-provider tests."
 }
 
 resource "google_service_account_key" "sa_key" {
