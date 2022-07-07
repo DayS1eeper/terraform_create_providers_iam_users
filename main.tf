@@ -7,7 +7,7 @@ resource "random_string" "external_id" {
 resource "aws_iam_user" "role_delegation_test" {
   name = "go_scal_role_delegation_test"
   tags = {
-    Owner = "v.mihun@scalr.com"
+    owner = "v.mihun@scalr.com"
   }
 }
 
@@ -35,7 +35,7 @@ resource "aws_iam_role" "role_delegation_test" {
     ]
   })
   tags = {
-    Owner = "v.mihun@scalr.com"
+    owner = "v.mihun@scalr.com"
   }
 }
 
