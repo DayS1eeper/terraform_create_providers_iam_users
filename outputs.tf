@@ -17,4 +17,5 @@ output "TEST_AWS_EXTERNAL_ID" {
 
 output "TEST_GOOGLE_CREDENTIALS" {
     value = base64decode(google_service_account_key.sa_key.private_key)
+    sensitive = true
 }
